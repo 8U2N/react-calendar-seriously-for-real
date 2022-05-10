@@ -49,7 +49,7 @@ export default class Calendar extends Component {
     }
 
     componentDidMount() {
-        fetch('https://burn-react-calendar-front.herokuapp.com/month/get')
+        fetch('https://burn-react-calendar-back.herokuapp.com/month/get')
             .then(response => response.json())
             .then(data => 
                 this.setState ({

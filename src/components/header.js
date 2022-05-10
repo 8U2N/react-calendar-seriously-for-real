@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function Header() {
+export default function Header(props) {
     return(
         <div className="month-name">
             <div className="left-arrow" onClick={() => props.monthChange("previous")}><h2>&#9668;</h2></div>
