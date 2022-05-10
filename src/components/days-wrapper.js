@@ -18,7 +18,7 @@ export default class DayWrapper extends Component {
 
     handleSubmit() {
         if (!this.state.reminderExists && this.state.textInput !== "") {
-            fetch("http://127.0.0.1:5000/reminder/add", { 
+            fetch("https://burn-react-calendar-front.herokuapp.com/reminder/add", { 
                 method: "POST",
                 headers: { "content-type": "application/json" },
                 body: JSON.stringify({
@@ -39,7 +39,7 @@ export default class DayWrapper extends Component {
              })
              .catch(error => console.log("Error Posting Reminder...", error))
         } else if (this.state.reminderExists && this.state.textInput !== "")
-            fetch(`http://127.0.0.1:5000/reminder/update/${this.month.id}/${this.props.date}`, {
+            fetch(`https://burn-react-calendar-front.herokuapp.com/reminder/update/${this.month.id}/${this.props.date}`, {
                 method: "PUT",
                 headers: { "content-type": "application/json" },
                 body: JSON.stringify({
